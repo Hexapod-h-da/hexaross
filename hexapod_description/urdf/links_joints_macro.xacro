@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="https://www.ros.org/wiki/xacro">
+
+	<xacro:macro name="m_link" params="name origin_xyz origin_rpy mesh_file mesh_scale">
+		<link name="${name}">
+			<visual>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+			</visual>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="m_joint" params="name type axis_xyz effort lower upper velocity origin_xyz origin_rpy parent child" >
+		<joint name="${name}" type="${type}">
+			<axis xyz="${axis_xyz}" />
+			<limit effort="${effort}" lower="${lower}" upper="${upper}" velocity="${velocity}" />
+			<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+			<parent link="${parent}" />
+			<child link="${child}" />
+		</joint>
+	</xacro:macro>
+
+</robot>
