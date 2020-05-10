@@ -2,24 +2,46 @@
 
 <robot xmlns:xacro="https://www.ros.org/wiki/xacro">
 
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find hexapod_description)/urdf/hexapod.gazebo" />
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find hexapod_description)/urdf/materials.xacro" />
+  
+  <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
+
 	<xacro:macro name="m_link" params="name origin_xyz origin_rpy mesh_file mesh_scale">
 		<link name="${name}">
+			<collision>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+			</collision>
+			
 			<visual>
 				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
 				<geometry>
 					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
 				</geometry>
+				<material name="red" />
 			</visual>
+			
+			<inertial>
+      			<origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
+      			<mass value="${mass}"/>
+      			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="0.5" iyz="0.0" izz="1.0" />
+    		</inertial>
 		</link>
 	</xacro:macro>
-
-	<xacro:macro name="m_joint" params="name type axis_xyz effort lower upper velocity origin_xyz origin_rpy parent child" >
+	
+	<xacro:macro name="m_joint" params="name type axis_xyz effort lower upper velocity origin_xyz origin_rpy parent child damping" >
 		<joint name="${name}" type="${type}">
 			<axis xyz="${axis_xyz}" />
 			<limit effort="${effort}" lower="${lower}" upper="${upper}" velocity="${velocity}" />
 			<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
 			<parent link="${parent}" />
 			<child link="${child}" />
+			<dynamics damping="${damping}"/>
 		</joint>
 	</xacro:macro>
 
