@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<robot>
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/rrbot</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <!-- Definin g link colours for Gazebo -->
+  <!-- base_link -->
+  <gazebo reference="base_link">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  
+  <!-- leg1_coxa -->
+  <gazebo reference="leg1_coxa">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <!-- leg2_coxa -->
+  <gazebo reference="leg2_coxa">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <!-- leg3_coxa -->
+  <gazebo reference="leg3_coxa">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <!-- leg4_coxa -->
+  <gazebo reference="leg4_coxa">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <!-- leg5_coxa -->
+  <gazebo reference="leg5_coxa">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <!-- leg6_coxa -->
+  <gazebo reference="leg6_coxa">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <!-- leg1_femur -->
+  <gazebo reference="leg1_femur">
+    <material>Gazebo/White</material>
+  </gazebo>
+  
+   <!-- leg2_femur -->
+  <gazebo reference="leg2_femur">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+   <!-- leg3_femur -->
+  <gazebo reference="leg3_femur">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+   <!-- leg4_femur -->
+  <gazebo reference="leg4_femur">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+   <!-- leg5_femur -->
+  <gazebo reference="leg6_femur">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+   <!-- leg6_femur -->
+  <gazebo reference="leg6_femur">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+   <!-- leg1_tibia -->
+  <gazebo reference="leg1_tibia">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+   <!-- leg2_tibia -->
+  <gazebo reference="leg2_tibia">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+   <!-- leg3_tibia -->
+  <gazebo reference="leg3_tibia">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+   <!-- leg4_tibia -->
+  <gazebo reference="leg4_tibia">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+   <!-- leg5_tibia -->
+  <gazebo reference="leg5_tibia">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+   <!-- leg6_tibia -->
+  <gazebo reference="leg6_tibia">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  
+</robot>
