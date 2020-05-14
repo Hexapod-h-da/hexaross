@@ -7,9 +7,7 @@
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find hexapod_description)/urdf/materials.xacro" />
   
-  <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
-
-	<xacro:macro name="m_link" params="name origin_xyz origin_rpy mesh_file mesh_scale">
+	<xacro:macro name="m_base_link" params="name origin_xyz origin_rpy inertia_origin_xyz mesh_file mesh_scale">
 		<link name="${name}">
 			<collision>
 				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
@@ -27,9 +25,92 @@
 			</visual>
 			
 			<inertial>
-      			<origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
-      			<mass value="${mass}"/>
-      			<inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="0.5" iyz="0.0" izz="1.0" />
+      			<origin xyz="${inertia_origin_xyz}" rpy="${origin_rpy}"/>
+      			<mass value="4"/>
+      			<inertia ixx="0.02109" 		   ixy="-0.000000524323" ixz="0.000000000016" 
+      					 iyx="-0.000000524323" iyy="0.0144" 		 iyz="0.000003891" 
+      					 izx="0.000000000016"  izy="0.000003891" 	 izz="0.0373"/>
+    		</inertial>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="m_coxa_link" params="name origin_xyz origin_rpy inertia_origin_xyz mesh_file mesh_scale">
+		<link name="${name}">
+			<collision>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+			</collision>
+			
+			<visual>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+				<material name="red" />
+			</visual>
+			
+			<inertial>
+      			<origin xyz="${inertia_origin_xyz}" rpy="${origin_rpy}"/>
+      			<mass value="0.2"/>
+      			<inertia ixx="0.00008176" 	   ixy="-0.000000295397" ixz="0.000000000742" 
+      					 iyx="-0.000000295397" iyy="0.0001025" 		 iyz="0.000000293619" 
+      					 izx="0.000000000742"  izy="0.000000293619"  izz="0.00008176"/>
+    		</inertial>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="m_femur_link" params="name origin_xyz origin_rpy inertia_origin_xyz mesh_file mesh_scale">
+		<link name="${name}">
+			<collision>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+			</collision>
+			
+			<visual>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+				<material name="red" />
+			</visual>
+			
+			<inertial>
+      			<origin xyz="${inertia_origin_xyz}" rpy="${origin_rpy}"/>
+      			<mass value="0.7"/>
+      			<inertia ixx="0.0000616" 	   ixy="0.000000004936"  ixz="-0.000000000097" 
+      					 iyx="0.000000004936"  iyy="0.0001212" 		 iyz="0.000000357772" 
+      					 izx="-0.000000000097" izy="0.000000357772"  izz="0.0006537"/>
+    		</inertial>
+		</link>
+	</xacro:macro>
+
+	<xacro:macro name="m_tibia_link" params="name origin_xyz origin_rpy inertia_origin_xyz mesh_file mesh_scale">
+		<link name="${name}">
+			<collision>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+			</collision>
+			
+			<visual>
+				<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+				<geometry>
+					<mesh filename="${mesh_file}" scale="${mesh_scale}" />
+				</geometry>
+				<material name="red" />
+			</visual>
+			
+			<inertial>
+      			<origin xyz="${inertia_origin_xyz}" rpy="${origin_rpy}"/>
+      			<mass value="0.5"/>
+      			<inertia ixx="0.00126"	 	   ixy="0.000003599427"  ixz="-0.0007157" 
+      					 iyx="0.000003599427"  iyy="0.001877" 		 iyz="0.000002060961" 
+      					 izx="-0.0007157" 	   izy="0.000002060961"  izz="0.0008954"/>
     		</inertial>
 		</link>
 	</xacro:macro>
