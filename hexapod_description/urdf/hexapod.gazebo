@@ -13,96 +13,115 @@
   <!-- base_link -->
   <gazebo reference="base_link">
     <material>Gazebo/Orange</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg1_coxa -->
   <gazebo reference="leg1_coxa">
     <material>Gazebo/Red</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg2_coxa -->
   <gazebo reference="leg2_coxa">
     <material>Gazebo/Red</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg3_coxa -->
   <gazebo reference="leg3_coxa">
     <material>Gazebo/Red</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg4_coxa -->
   <gazebo reference="leg4_coxa">
     <material>Gazebo/Red</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg5_coxa -->
   <gazebo reference="leg5_coxa">
     <material>Gazebo/Red</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg6_coxa -->
   <gazebo reference="leg6_coxa">
     <material>Gazebo/Red</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
   <!-- leg1_femur -->
   <gazebo reference="leg1_femur">
     <material>Gazebo/White</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
    <!-- leg2_femur -->
   <gazebo reference="leg2_femur">
     <material>Gazebo/White</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg3_femur -->
   <gazebo reference="leg3_femur">
     <material>Gazebo/White</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg4_femur -->
   <gazebo reference="leg4_femur">
     <material>Gazebo/White</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg5_femur -->
   <gazebo reference="leg6_femur">
     <material>Gazebo/White</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg6_femur -->
   <gazebo reference="leg6_femur">
     <material>Gazebo/White</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg1_tibia -->
   <gazebo reference="leg1_tibia">
     <material>Gazebo/Blue</material>
+    <gravity>0</gravity>
   </gazebo>
 
    <!-- leg2_tibia -->
   <gazebo reference="leg2_tibia">
     <material>Gazebo/Blue</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg3_tibia -->
   <gazebo reference="leg3_tibia">
     <material>Gazebo/Blue</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg4_tibia -->
   <gazebo reference="leg4_tibia">
     <material>Gazebo/Blue</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg5_tibia -->
   <gazebo reference="leg5_tibia">
     <material>Gazebo/Blue</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
    <!-- leg6_tibia -->
   <gazebo reference="leg6_tibia">
     <material>Gazebo/Blue</material>
+    <turnGravityOff>0</turnGravityOff>
   </gazebo>
   
 </robot>
