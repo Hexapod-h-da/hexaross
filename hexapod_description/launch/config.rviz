@@ -106,6 +106,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        leg1_rubber_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         leg1_tibia:
           Alpha: 1
           Show Axes: false
@@ -117,6 +122,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         leg2_femur:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg2_rubber_tip:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -136,6 +146,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        leg3_rubber_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         leg3_tibia:
           Alpha: 1
           Show Axes: false
@@ -147,6 +162,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         leg4_femur:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        leg4_rubber_tip:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -166,6 +186,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        leg5_rubber_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         leg5_tibia:
           Alpha: 1
           Show Axes: false
@@ -181,11 +206,20 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        leg6_rubber_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         leg6_tibia:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -220,25 +254,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.4863786697387695
+      Distance: 1.827735424041748
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.13498298823833466
-        Y: 0.2694266736507416
-        Z: -0.17882177233695984
+        X: -0.2546422779560089
+        Y: 0.18918682634830475
+        Z: -0.07802020758390427
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5803991556167603
+      Pitch: 0.4753991365432739
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.308581352233887
+      Yaw: 4.823580265045166
     Saved: ~
 Window Geometry:
   Displays:

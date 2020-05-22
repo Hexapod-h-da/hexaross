@@ -47,6 +47,15 @@
 							inertia_origin_xyz="0.083874 0.000095 0.046294"
 							mesh_file="package://hexapod_description/meshes/leg_tibia.stl" mesh_scale="0.001 0.001 0.001" />
 
+						<m_joint_fixed name="leg1_tibia__leg1_rubber_tip" type="fixed"
+						 parent="leg1_tibia" child="leg1_rubber_tip" />
+
+						<m_rubber_tip_link name="leg1_rubber_tip"
+								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
+								inertia_origin_xyz="0.083874 0.000095 0.046294"
+								mesh_file="package://hexapod_description/meshes/leg_rubber_tip.stl" mesh_scale="0.001 0.001 0.001" />
+
+
 
 		<!-- LEG 2 (North West) -->
 			<m_joint name="base_link__leg2_coxa" type="revolute" axis_xyz="0 0 1" 
@@ -77,6 +86,14 @@
 							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
 							inertia_origin_xyz="0.083874 0.000095 0.046294"
 							mesh_file="package://hexapod_description/meshes/leg_tibia.stl" mesh_scale="0.001 0.001 0.001" />
+
+						<m_joint_fixed name="leg2_tibia__leg2_rubber_tip" type="fixed"
+						 parent="leg2_tibia" child="leg2_rubber_tip" />
+
+						<m_rubber_tip_link name="leg2_rubber_tip"
+								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
+								inertia_origin_xyz="0.083874 0.000095 0.046294"
+								mesh_file="package://hexapod_description/meshes/leg_rubber_tip.stl" mesh_scale="0.001 0.001 0.001" />
 
 
 		<!-- LEG 3 (East) -->
@@ -109,6 +126,14 @@
 							inertia_origin_xyz="0.083874 0.000095 0.046294"
 							mesh_file="package://hexapod_description/meshes/leg_tibia.stl" mesh_scale="0.001 0.001 0.001" />
 
+						<m_joint_fixed name="leg3_tibia__leg3_rubber_tip" type="fixed"
+						 parent="leg3_tibia" child="leg3_rubber_tip" />
+
+						<m_rubber_tip_link name="leg3_rubber_tip"
+								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
+								inertia_origin_xyz="0.083874 0.000095 0.046294"
+								mesh_file="package://hexapod_description/meshes/leg_rubber_tip.stl" mesh_scale="0.001 0.001 0.001" />
+
 
 		<!-- LEG 4 (West) -->
 			<m_joint name="base_link__leg4_coxa" type="revolute" axis_xyz="0 0 1" 
@@ -139,6 +164,14 @@
 							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
 							inertia_origin_xyz="0.083874 0.000095 0.046294"
 							mesh_file="package://hexapod_description/meshes/leg_tibia.stl" mesh_scale="0.001 0.001 0.001" />
+
+						<m_joint_fixed name="leg4_tibia__leg4_rubber_tip" type="fixed"
+						 parent="leg4_tibia" child="leg4_rubber_tip" />
+
+						<m_rubber_tip_link name="leg4_rubber_tip"
+								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
+								inertia_origin_xyz="0.083874 0.000095 0.046294"
+								mesh_file="package://hexapod_description/meshes/leg_rubber_tip.stl" mesh_scale="0.001 0.001 0.001" />
 
 
 		<!-- LEG 5 (South East) -->
@@ -171,6 +204,14 @@
 							inertia_origin_xyz="0.083874 0.000095 0.046294"
 							mesh_file="package://hexapod_description/meshes/leg_tibia.stl" mesh_scale="0.001 0.001 0.001" />
 
+						<m_joint_fixed name="leg5_tibia__leg5_rubber_tip" type="fixed"
+						 parent="leg5_tibia" child="leg5_rubber_tip" />
+
+						<m_rubber_tip_link name="leg5_rubber_tip"
+								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
+								inertia_origin_xyz="0.083874 0.000095 0.046294"
+								mesh_file="package://hexapod_description/meshes/leg_rubber_tip.stl" mesh_scale="0.001 0.001 0.001" />
+
 
 		<!-- LEG 6 (South West) -->
 			<m_joint name="base_link__leg6_coxa" type="revolute" axis_xyz="0 0 1" 
@@ -201,5 +242,13 @@
 							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
 							inertia_origin_xyz="0.083874 0.000095 0.046294"
 							mesh_file="package://hexapod_description/meshes/leg_tibia.stl" mesh_scale="0.001 0.001 0.001" />
+
+						<m_joint_fixed name="leg6_tibia__leg6_rubber_tip" type="fixed"
+						 parent="leg6_tibia" child="leg6_rubber_tip" />
+
+						<m_rubber_tip_link name="leg6_rubber_tip"
+								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
+								inertia_origin_xyz="0.083874 0.000095 0.046294"
+								mesh_file="package://hexapod_description/meshes/leg_rubber_tip.stl" mesh_scale="0.001 0.001 0.001" />
 
 </robot>
