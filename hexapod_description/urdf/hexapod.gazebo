@@ -4,7 +4,7 @@
   <!-- ros_control plugin -->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-      <robotNamespace>/rrbot</robotNamespace>
+      <robotNamespace>/hexapod</robotNamespace>
       <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
     </plugin>
   </gazebo>
@@ -122,6 +122,31 @@
   <gazebo reference="leg6_tibia">
     <material>Gazebo/Blue</material>
     <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
+     <!-- leg1_rubber_tip -->
+   <gazebo reference="leg1_tibia__leg1_rubber_tip">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+
+     <gazebo reference="leg2_tibia__leg2_rubber_tip">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+
+     <gazebo reference="leg3_tibia__leg3_rubber_tip">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+
+     <gazebo reference="leg4_tibia__leg4_rubber_tip">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+
+     <gazebo reference="leg5_tibia__leg5_rubber_tip">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo>
+
+     <gazebo reference="leg6_tibia__leg6_rubber_tip">
+    <preserveFixedJoint>true</preserveFixedJoint>
   </gazebo>
   
 </robot>
