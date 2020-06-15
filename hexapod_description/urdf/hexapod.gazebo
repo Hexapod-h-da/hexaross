@@ -143,7 +143,50 @@
     <turnGravityOff>0</turnGravityOff>
   </gazebo>
 
+  <!-- leg1_rubber_tip -->
+  <gazebo reference="leg1_rubber_tip">
+    <material>Gazebo/Black</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
+  <!-- leg2_rubber_tip -->
+  <gazebo reference="leg2_rubber_tip">
+    <material>Gazebo/Black</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
+  <!-- leg3_rubber_tip -->
+  <gazebo reference="leg3_rubber_tip">
+    <material>Gazebo/Black</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
+  <!-- leg4_rubber_tip -->
+  <gazebo reference="leg4_rubber_tip">
+    <material>Gazebo/Black</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
+  <!-- leg5_rubber_tip -->
+  <gazebo reference="leg5_rubber_tip">
+    <material>Gazebo/Black</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
+  <!-- leg6_rubber_tip -->
+  <gazebo reference="leg6_rubber_tip">
+    <material>Gazebo/Black</material>
+    <selfCollide>true</selfCollide>
+    <turnGravityOff>0</turnGravityOff>
+  </gazebo>
+
      <!-- leg1_rubber_tip -->
+<!--
    <gazebo reference="leg1_tibia__leg1_rubber_tip">
     <preserveFixedJoint>true</preserveFixedJoint>
   </gazebo>
@@ -167,5 +210,6 @@
      <gazebo reference="leg6_tibia__leg6_rubber_tip">
     <preserveFixedJoint>true</preserveFixedJoint>
   </gazebo>
-  
+-->
+
 </robot>

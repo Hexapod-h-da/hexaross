@@ -8,90 +8,90 @@ hexapod:
   base_link__leg1_coxa_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__leg1_coxa
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg1_coxa__leg1_femur_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg1_coxa__leg1_femur
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg1_femur__leg1_tibia_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg1_femur__leg1_tibia
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   base_link__leg2_coxa_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__leg2_coxa
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg2_coxa__leg2_femur_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg2_coxa__leg2_femur
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg2_femur__leg2_tibia_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg2_femur__leg2_tibia
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   base_link__leg3_coxa_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__leg3_coxa
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg3_coxa__leg3_femur_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg3_coxa__leg3_femur
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg3_femur__leg3_tibia_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg3_femur__leg3_tibia
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   base_link__leg4_coxa_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__leg4_coxa
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg4_coxa__leg4_femur_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg4_coxa__leg4_femur
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg4_femur__leg4_tibia_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg4_femur__leg4_tibia
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   base_link__leg5_coxa_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__leg5_coxa
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg5_coxa__leg5_femur_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg5_coxa__leg5_femur
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg5_femur__leg5_tibia_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg5_femur__leg5_tibia
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   base_link__leg6_coxa_position_controller:
     type: effort_controllers/JointPositionController
     joint: base_link__leg6_coxa
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg6_coxa__leg6_femur_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg6_coxa__leg6_femur
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
 
   leg6_femur__leg6_tibia_position_controller:
     type: effort_controllers/JointPositionController
     joint: leg6_femur__leg6_tibia
-    pid: {p: 0.1, i: 0.1, d: 0.1}
+    pid: {p: 25.0, i: 0.0, d: 0.35}
       

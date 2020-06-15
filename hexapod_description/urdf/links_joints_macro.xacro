@@ -142,14 +142,14 @@
 		</link>
 	</xacro:macro>
 	
-	<xacro:macro name="m_joint" params="name type axis_xyz effort lower upper velocity origin_xyz origin_rpy parent child damping" >
+	<xacro:macro name="m_joint" params="name type axis_xyz effort lower upper velocity origin_xyz origin_rpy parent child" >
 		<joint name="${name}" type="${type}">
 			<axis xyz="${axis_xyz}" />
 			<limit effort="${effort}" lower="${lower}" upper="${upper}" velocity="${velocity}" />
 			<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
 			<parent link="${parent}" />
 			<child link="${child}" />
-			<dynamics damping="${damping}"/>
+			
 		</joint>
 	</xacro:macro>
 

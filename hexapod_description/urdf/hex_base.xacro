@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<robot name="hexapod_base" xmlns:xacro="https://www.ros.org/wiki/xacro">
+
+	<link name="world"/>
+
+	<joint name="init_joint" type="fixed">
+ 	    <parent link="world"/>
+ 	    <child link="hex_base1"/>
+ 	</joint>
+
+	<link name="hex_base1">
+       	<visual>
+       		<origin xyz="0 0 0.06" rpy="0 0 0" />
+         	<geometry>
+           		<cylinder length="0.06" radius="0.12"/>
+         	</geometry>
+       	</visual>
+       	<collision>
+       		<origin xyz="0 0 0.06" rpy="0 0 0" />
+         	<geometry>
+           		<cylinder length="0.06" radius="0.12"/>
+        	</geometry>
+    	</collision>
+    	<inertial>
+      			<origin xyz="0 0 0" rpy="0 0 0"/>
+      			<mass value="10"/>
+      			<inertia ixx="1"			ixy="0" 		ixz="0" 
+      					 iyx="0"			iyy="1" 		iyz="0" 
+      					 izx="0"  			izy="0" 		izz="1"/>
+    	</inertial>
+    </link>
+
+	<joint name="tobox" type="fixed">
+ 	    <parent link="hex_base1"/>
+ 	    <child link="hex_base2"/>
+ 	    <origin xyz="0 0 0.06"/>
+ 	</joint>
+
+    <link name="hex_base2">
+       	<visual>
+       		<origin xyz="0 0 0.06" rpy="0 0 0" />
+         	<geometry>
+           		<box size="0.08 0.08 0.15"/>
+         	</geometry>
+       	</visual>
+       	<collision>
+       		<origin xyz="0 0 0.06" rpy="0 0 0" />
+         	<geometry>
+           		<box size="0.08 0.08 0.15"/>
+        	</geometry>
+    	</collision>
+    	<inertial>
+      			<origin xyz="0 0 0.06" rpy="0 0 0"/>
+      			<mass value="1"/>
+      			<inertia ixx="1"			ixy="0" 		ixz="0" 
+      					 iyx="0"			iyy="1" 		iyz="0" 
+      					 izx="0"  			izy="0" 		izz="1"/>
+    	</inertial>
+    </link>
+
+</robot>
