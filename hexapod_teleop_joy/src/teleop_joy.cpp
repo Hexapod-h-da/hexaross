@@ -1,6 +1,6 @@
 #include "teleop_joy.hpp"
 
-TeleopJoy::TeleopJoy(){
+TeleopJoy::TeleopJoy() {
 
 	ROS_INFO("Constructor.");
 
@@ -9,63 +9,15 @@ TeleopJoy::TeleopJoy(){
 	for (int i=0; i<18; i++) {
     	createPublishers(node, i);
   	}
-
-  	halfStep = true;
 		
 }
 
-void TeleopJoy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy){
+void TeleopJoy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
 
-	ROS_INFO("joyCallback function");
+	if (joy->buttons[PS3_BUTTON_REAR_RIGHT_1]) {
 
-	std_msgs::Float64 Q1, Q2, Q3;
-
-	ROS_INFO("button: %d\n", joy->buttons[button_left_shift]);
-
-	float q1=0.0, q2=0.0, q3=0.0;
-
-	halfStep = true;
-
-	if (joy->buttons[button_right_shift]) {
-		ROS_INFO("HOME Button pressed");
-
-		getAngleWithIK(0,0,0,q1,q2,q3);
-
-		ROS_INFO("IK called, q1 = %f, q2 = %f, q3=%f", q1,q2,q3);
-
-		Q1.data = q1;
-		Q2.data = q2;
-		Q3.data = q3;
-
-		pub[0].publish(Q1);
-		pub[1].publish(Q2);
-		pub[2].publish(Q3);
-
-		pub[3].publish(Q1);
-		pub[4].publish(Q2);
-		pub[5].publish(Q3);
-
-		pub[6].publish(Q1);
-		pub[7].publish(Q2);
-		pub[8].publish(Q3);
-
-		pub[9].publish(Q1);
-		pub[10].publish(Q2);
-		pub[11].publish(Q3);
-
-		pub[12].publish(Q1);
-		pub[13].publish(Q2);
-		pub[14].publish(Q3);
-
-		pub[15].publish(Q1);
-		pub[16].publish(Q2);
-		pub[17].publish(Q3);  
-
-		oldX = 0;
-		oldY = 0;
-		oldZ = 0;
-
-
+		addZOffset = 0;
+		goToHome();
 	}
 
 	if (joy->axes[PS3_AXIS_STICK_LEFT_LEFTWARDS] || joy->axes[PS3_AXIS_STICK_LEFT_UPWARDS]) {
@@ -87,13 +39,11 @@ void TeleopJoy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy){
 		y = oldY;
 		z = 0;
 
-
 		linDis = sqrt(pow(wX,2) + pow(wY,2));
 		linDis = round(linDis);
 		int h=40; //height
 		int p = linDis; //distance
 		float steps = 10;
-		//float x=0,y=0,z=0,pX=0,pY=0,pZ=0;
 
 
 		ROS_INFO("newX =  %f", newX);
@@ -152,8 +102,6 @@ void TeleopJoy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy){
 		ROS_INFO("oldX =  %f", oldX);
 		ROS_INFO("oldY =  %f", oldY);
 
-		
-
 		// changing sequence
 		int temp;
 		for (int i=0; i<3; i++) {
@@ -162,56 +110,58 @@ void TeleopJoy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy){
 			stanceLegs[i] = temp;
 		}
 
-		/*
+	}
 
-		//NEXT HALF
-		for (float i=0; i<=linDis; i += (linDis/steps)) {
+	if (joy->buttons[PS3_BUTTON_CROSS_UP]) {
+		addZOffset = 40;
 
-			//swing
-			z = -1*(h/pow((p/2),2))*(pow(i - (p/2),2)) + h;
+		goToHome();
+	}
 
-			for (int j=0; j<3; j++) {
-				getLegCoordinatesFromWorldCoordinates(swingLegs[j], -x, -y, z, pX, pY, pZ);	
-				getAngleWithIK(pX,pY,pZ,q1,q2,q3);
+	if (joy->buttons[PS3_BUTTON_CROSS_DOWN]) {
+		addZOffset = -40;
 
-				Q1.data = q1;
-				Q2.data = q2;
-				Q3.data = q3;
-
-				pub[swingLegs[j]*3 - 3].publish(Q1);
-				pub[swingLegs[j]*3 - 2].publish(Q2);
-				pub[swingLegs[j]*3 - 1].publish(Q3);
-			}
-			
-			//stance
-			z=0;
-			for (int j=0; j<3; j++) {
-				getLegCoordinatesFromWorldCoordinates(stanceLegs[j], x, y, z, pX, pY, pZ);	
-				getAngleWithIK(pX,pY,pZ,q1,q2,q3);
-
-				Q1.data = q1;
-				Q2.data = q2;
-				Q3.data = q3;
-
-				pub[stanceLegs[j]*3 - 3].publish(Q1);
-				pub[stanceLegs[j]*3 - 2].publish(Q2);
-				pub[stanceLegs[j]*3 - 1].publish(Q3);
-			}
-
-			x -= wX/steps;
-			y -= wY/steps;
-
-			ros::Duration(0.01).sleep();
-		}
-		
-		// changing sequence
-		for (int i=0; i<3; i++) {
-			temp = swingLegs[i];
-			swingLegs[i] = stanceLegs[i];
-			stanceLegs[i] = temp;
-		} */
+		goToHome();
 	}
 	
+}
+
+void TeleopJoy::goToHome() {
+
+		getAngleWithIK(0,0,0,q1,q2,q3);
+
+		Q1.data = q1;
+		Q2.data = q2;
+		Q3.data = q3;
+
+		pub[0].publish(Q1);
+		pub[1].publish(Q2);
+		pub[2].publish(Q3);
+
+		pub[3].publish(Q1);
+		pub[4].publish(Q2);
+		pub[5].publish(Q3);
+
+		pub[6].publish(Q1);
+		pub[7].publish(Q2);
+		pub[8].publish(Q3);
+
+		pub[9].publish(Q1);
+		pub[10].publish(Q2);
+		pub[11].publish(Q3);
+
+		pub[12].publish(Q1);
+		pub[13].publish(Q2);
+		pub[14].publish(Q3);
+
+		pub[15].publish(Q1);
+		pub[16].publish(Q2);
+		pub[17].publish(Q3);  
+
+		oldX = 0;
+		oldY = 0;
+		oldZ = 0;
+
 }
 
 void TeleopJoy::limitInputs(float& newX, float& newY) {
@@ -256,31 +206,21 @@ void TeleopJoy::limitInputs(float& newX, float& newY) {
 
 }
 
-unsigned char TeleopJoy::getAngleWithIK(float px, float py, float pz, float& q1, float& q2, float& q3){
+void TeleopJoy::getAngleWithIK(float px, float py, float pz, float& q1, float& q2, float& q3){
 	float r;
 	float s;
 	float squad;
 	float tmp;
 	float omega;
 	
-	//ROS_INFO("Before y,z offset, px = %f, py = %f, pz = %f", px, py, pz);
+
+	py = py + yOffset;
+	pz = pz + zOffset + addZOffset;
+
 	
-	float C = 47.75;
-	float F = 76.395;
-	float T = 204.33;
-
-	float c_pyOffset = 197.1407+30;
-	float c_pzOffset = 116.7084;
-
-	//px=px;
-	py=py+c_pyOffset;
-	pz=pz+c_pzOffset;
-
-	//ROS_INFO("After y,z offset, px = %f, py = %f, pz = %f", px, py, pz);
-
 	q1=-1*atan2(px,py);
 
-	//Coxa/Tip Frame to Femur Frame
+	//Changing origin from Coxa Frame to Femur Frame
     float xF, yF, zF;
     
     tmp= pow(px,2)+pow(py,2);
@@ -288,9 +228,6 @@ unsigned char TeleopJoy::getAngleWithIK(float px, float py, float pz, float& q1,
     yF = -pz;
     zF = 0;
 
-    //ROS_INFO("Femur Frame, px = %f, py = %f, pz = %f", xF, yF, zF);
-
-    
 	tmp=pow(xF,2)+pow(yF,2);
 	s=sqrt(tmp);
 	squad=pow(s,2);
@@ -303,16 +240,11 @@ unsigned char TeleopJoy::getAngleWithIK(float px, float py, float pz, float& q1,
 	tmp=((F*F)+(T*T)-squad)/(2*F*T);
 	q3= -3.14159+acos(tmp);
 
-	q3 = q3+0.6335545;
-	
-	//ROS_INFO("IK called, q1 = %f, q2 = %f, q3=%f", q1,q2,q3);
-
-
-	return 1;
+	q3 = q3+0.6335545;    //adding 36.3 deg because of leg construction
 
 }
 
-unsigned char TeleopJoy::getLegCoordinatesFromWorldCoordinates(int legNumber, float pwX, float pwY, float pwZ, float& pX, float& pY, float& pZ){
+void TeleopJoy::getLegCoordinatesFromWorldCoordinates(int legNumber, float pwX, float pwY, float pwZ, float& pX, float& pY, float& pZ){
 		switch (legNumber){
 			case 1:
 				pX=pwX*cos(c_phi)-pwY*sin(c_phi);
@@ -345,11 +277,9 @@ unsigned char TeleopJoy::getLegCoordinatesFromWorldCoordinates(int legNumber, fl
 				pZ=-pwZ;
 			break;
 			default:
-			ROS_INFO("Default called");
-				return 0;
+				ROS_INFO("Default called");
 			break;
 		}
-		return 1;
 }
 
 void TeleopJoy::createPublishers(ros::NodeHandle &node, int num) {

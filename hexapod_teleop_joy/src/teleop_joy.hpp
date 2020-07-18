@@ -53,24 +53,18 @@
 #define PS3_AXIS_GYRO_YAW                19
 
 
-#define l01a		119.845		/* 119.845 mm*/
-#define l01b		47.75	 	/*mm*/
-#define l12			76.395      /*mm*/
-#define l23			204.33	    /*mm*/
-#define l12quad		pow(l12,2)
-#define l23quad		pow(l23,2)
-//Properties of the servos (see documentation for definition)
-#define bmax		4956.084 /*deg/sec^2*/ 
-#define vmax		684.0/2 /*deg/sec^2*/ 
+/* Constant values for kinematic calculation */
 
-//Constant values for kinematic calculations
-#define c_k			sqrt(pow(l01a,2)+pow(l01b,2))
+//Lengths of the links
+#define C  47.75
+#define F  76.395
+#define T  204.33
+
+//Offsets
+#define yOffset  227.1407
+#define zOffset  116.7084
+
 #define c_phi		M_PI / 4.0 //TODO: Need to be evaluated
-#define c_kquad		pow(c_k,2)
-#define c_gamma		atan(l01b/l01a)
-#define c_delta		atan(l01a/l01b)
-//#define c_pyOffset  190
-//#define c_pzOffset  30
 
 
 class TeleopJoy {
@@ -91,37 +85,24 @@ class TeleopJoy {
 		ros::Publisher pub[18];
 		float inputX = 0, inputY = 0;
 
+		std_msgs::Float64 Q1, Q2, Q3;
+		float q1=0.0, q2=0.0, q3=0.0;
+
+		float addZOffset = 0;
 		float wX=0, wY=0, wZ=0, newX=0, newY=0, newZ=0, oldX=0, oldY=0, oldZ=0;
 		float oldx = 0, oldy = 0;
 		float x=0,y=0,z=0,pX=0,pY=0,pZ=0;
 		float linDis=0;
 		int legNumber; 
-		bool halfStep;
 		int swingLegs[3] = {1,4,5};
 		int stanceLegs[3] = {2,3,6};
 		
 		void joyCallback(const sensor_msgs::Joy::ConstPtr& joy);
 		void createPublishers(ros::NodeHandle &n, int num);
-		unsigned char getAngleWithIK(float px, float py, float pz, float& q1, float& q2, float& q3);
-		unsigned char getLegCoordinatesFromWorldCoordinates(int legNumber, float pwX, float pwY, float pwZ, float& pkX, float& pkY, float& pkZ);
+		void getAngleWithIK(float px, float py, float pz, float& q1, float& q2, float& q3);
+		void getLegCoordinatesFromWorldCoordinates(int legNumber, float pwX, float pwY, float pwZ, float& pkX, float& pkY, float& pkZ);
 		void limitInputs(float& newX, float& newY);
-
-		const static int axis_body_roll = PS3_AXIS_STICK_LEFT_LEFTWARDS;
-		const static int axis_body_pitch = PS3_AXIS_STICK_LEFT_UPWARDS;
-		const static int axis_body_yaw = PS3_AXIS_STICK_RIGHT_LEFTWARDS;
-		const static int axis_body_y_off = PS3_AXIS_STICK_LEFT_LEFTWARDS;
-		const static int axis_body_x_off = PS3_AXIS_STICK_LEFT_UPWARDS;
-		const static int axis_body_z_off = PS3_AXIS_STICK_RIGHT_UPWARDS;
-		const static int button_left_shift = PS3_BUTTON_REAR_LEFT_1;
-		const static int button_right_shift = PS3_BUTTON_REAR_RIGHT_1;
-		const static int button_right_shift_2 = PS3_BUTTON_REAR_LEFT_2;
-		const static int button_start = PS3_BUTTON_START;
-		const static int axis_fi_x = PS3_AXIS_STICK_LEFT_LEFTWARDS;
-		const static int axis_fi_y = PS3_AXIS_STICK_LEFT_UPWARDS;
-		const static int button_gait_switch = PS3_BUTTON_ACTION_TRIANGLE;
-		const static int axis_alpha = PS3_AXIS_STICK_RIGHT_LEFTWARDS;
-		const static int axis_scale = PS3_AXIS_STICK_RIGHT_UPWARDS;
-		const static int button_imu = PS3_BUTTON_ACTION_CROSS;
+		void goToHome();
 };
 
 
