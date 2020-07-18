@@ -5,8 +5,11 @@
     <param name="dev" type="string" value="/dev/input/js0" />
     <param name="deadzone" value="0.1" />
     <param name="coalesce_interval" value="0.02" />
+    <param name="autorepeat_rate" value="3.0" />
   </node>
 
  <node name="hexapod_teleop_joy" pkg="hexapod_teleop_joy" type="teleop_joy" output="screen"/>
+
+ <!--<node name="hexapod_teleop_joy_troubleshoot" pkg="hexapod_teleop_joy" type="teleop_joy_troubleshoot" output="screen"/>-->
 
 </launch>

@@ -44,4 +44,7 @@ include_directories( include ${catkin_INCLUDE_DIRS})
 add_executable(teleop_joy src/teleop_joy.cpp)
 target_link_libraries(teleop_joy ${catkin_LIBRARIES})
 
+add_executable(teleop_joy_troubleshoot src/teleop_joy_troubleshoot.cpp)
+target_link_libraries(teleop_joy_troubleshoot ${catkin_LIBRARIES})
+
 

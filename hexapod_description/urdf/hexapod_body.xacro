@@ -20,212 +20,212 @@
 		<!-- LEG 1 (North East) -->
 			<m_joint name="base_link__leg1_coxa" type="revolute" axis_xyz="0 0 1" 
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-			 		 origin_xyz="0.072981 0.109608 0" origin_rpy="0 0 -0.7854"
+			 		 origin_xyz="0.072981 0.109608 0.021" origin_rpy="0 3.14159 -0.7854"
 					 parent="base_link" child="leg1_coxa" />
 
 			<m_coxa_link name="leg1_coxa"
-					origin_xyz="0 0 0.021" origin_rpy="0 0 0" inertia_origin_xyz="0 0.023937 0.021" />
+					origin_xyz="0 0 0" origin_rpy="0 3.14159 0" inertia_origin_xyz="0 0.023937 0" />
 
-				<m_joint name="leg1_coxa__leg1_femur" type="revolute" axis_xyz="1 0 0"
+				<m_joint name="leg1_coxa__leg1_femur" type="revolute" axis_xyz="0 0 1"
 				 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-				 origin_xyz="0 0.047868 0.021" origin_rpy="0 0 0"
+				 origin_xyz="0 0.047868 0" origin_rpy="-1.5708 0 1.5708"
 				 parent="leg1_coxa" child="leg1_femur" />
 
 				<m_femur_link name="leg1_femur"
-						origin_xyz="0 0.0385 0" origin_rpy="0 3.14159 0" 
-						inertia_origin_xyz="0 0.0385 0" />
+						origin_xyz="0.0385 0 0" origin_rpy="-1.5708 0 0" 
+						inertia_origin_xyz="0.0385 0 0" />
 
-					<m_joint name="leg1_femur__leg1_tibia" type="revolute" axis_xyz="1 0 0"
+					<m_joint name="leg1_femur__leg1_tibia" type="revolute" axis_xyz="0 0 1"
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-					 origin_xyz="0 0.077 0" origin_rpy="0 0 0"
-					 parent="leg1_femur" child="leg1_tibia" />
+					 origin_xyz="0.077 0 0" origin_rpy="0 0 0"
+					 parent="leg1_femur" child="leg1_tibia"/>
 
 					<m_tibia_link name="leg1_tibia"
-							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
-							inertia_origin_xyz="0 0.077796 -0.036156"/>
+							origin_xyz="0 0 0" origin_rpy="1.5708 0 0" 
+							inertia_origin_xyz="0.077796 -0.036156 0"/>
 
 						<m_joint_fixed name="leg1_tibia__leg1_rubber_tip" type="fixed"
 						 parent="leg1_tibia" child="leg1_rubber_tip" />
 
 						<m_rubber_tip_link name="leg1_rubber_tip"
-								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
-								inertia_origin_xyz="0 0.136283 -0.133814"/>
+								origin_xyz="0.136283 -0.133814 0" origin_rpy="1.5708 0 0.3769938" 
+								inertia_origin_xyz="0.136283 -0.133814 0"/>
 
 
 
 		<!-- LEG 2 (North West) -->
 			<m_joint name="base_link__leg2_coxa" type="revolute" axis_xyz="0 0 1" 
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-			 		 origin_xyz="-0.072981 0.109608 0" origin_rpy="0 0 0.7854"
+			 		 origin_xyz="-0.072981 0.109608 0.021" origin_rpy="0 3.14159 0.7854"
 					 parent="base_link" child="leg2_coxa" />
 
 			<m_coxa_link name="leg2_coxa"
-					origin_xyz="0 0 0.021" origin_rpy="0 0 0" inertia_origin_xyz="0 0.023937 0.021"/>
+					origin_xyz="0 0 0" origin_rpy="0 3.14159 0" inertia_origin_xyz="0 0.023937 0"/>
 
-				<m_joint name="leg2_coxa__leg2_femur" type="revolute" axis_xyz="1 0 0"
+				<m_joint name="leg2_coxa__leg2_femur" type="revolute" axis_xyz="0 0 1"
 						 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-						 origin_xyz="0 0.047868 0.021" origin_rpy="0 0 0"
+						 origin_xyz="0 0.047868 0" origin_rpy="-1.5708 0 1.5708"
 						 parent="leg2_coxa" child="leg2_femur" />
 
 				<m_femur_link name="leg2_femur"
-						origin_xyz="0 0.0385 0" origin_rpy="0 3.14159 0"
-						inertia_origin_xyz="0 0.0385 0"/>
+						origin_xyz="0.0385 0 0" origin_rpy="-1.5708 0 0"
+						inertia_origin_xyz="0.0385 0 0"/>
 
-					<m_joint name="leg2_femur__leg2_tibia" type="revolute" axis_xyz="1 0 0"
+					<m_joint name="leg2_femur__leg2_tibia" type="revolute" axis_xyz="0 0 1"
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-					 origin_xyz="0 0.077 0" origin_rpy="0 0 0"
+					 origin_xyz="0.077 0 0" origin_rpy="0 0 0"
 					 parent="leg2_femur" child="leg2_tibia" />
 
 					<m_tibia_link name="leg2_tibia"
-							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
-							inertia_origin_xyz="0 0.077796 -0.036156"/>
+							origin_xyz="0 0 0" origin_rpy="1.5708 0 0" 
+							inertia_origin_xyz="0.077796 -0.036156 0"/>
 
 						<m_joint_fixed name="leg2_tibia__leg2_rubber_tip" type="fixed"
 						 parent="leg2_tibia" child="leg2_rubber_tip" />
 
 						<m_rubber_tip_link name="leg2_rubber_tip"
-								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
-								inertia_origin_xyz="0 0.136283 -0.133814"/>
+								origin_xyz="0.136283 -0.133814 0" origin_rpy="1.5708 0 0.3769938" 
+								inertia_origin_xyz="0.136283 -0.133814 0"/>
 
 
 		<!-- LEG 3 (East) -->
 			<m_joint name="base_link__leg3_coxa" type="revolute" axis_xyz="0 0 1" 
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-			 		 origin_xyz="0.09850 0 0" origin_rpy="0 0 -1.5708"
+			 		 origin_xyz="0.09850 0 0.021" origin_rpy="0 3.14159 -1.5708"
 					 parent="base_link" child="leg3_coxa" />
 
-			<m_coxa_link name="leg3_coxa" inertia_origin_xyz="0 0.023937 0.021"
-					origin_xyz="0 0 0.021" origin_rpy="0 0 0"/>
+			<m_coxa_link name="leg3_coxa" 
+					origin_xyz="0 0 0" origin_rpy="0 3.14159 0" inertia_origin_xyz="0 0.023937 0"/>
 
-				<m_joint name="leg3_coxa__leg3_femur" type="revolute" axis_xyz="1 0 0"
+				<m_joint name="leg3_coxa__leg3_femur" type="revolute" axis_xyz="0 0 1"
 						 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-						 origin_xyz="0 0.047868 0.021" origin_rpy="0 0 0"
+						 origin_xyz="0 0.047868 0" origin_rpy="-1.5708 0 1.5708"
 						 parent="leg3_coxa" child="leg3_femur" />
 
 				<m_femur_link name="leg3_femur"
-						origin_xyz="0 0.0385 0" origin_rpy="0 3.14159 0" 
-						inertia_origin_xyz="0 0.0385 0"/>
+						origin_xyz="0.0385 0 0" origin_rpy="-1.5708 0 0" 
+						inertia_origin_xyz="0.0385 0 0"/>
 
-					<m_joint name="leg3_femur__leg3_tibia" type="revolute" axis_xyz="1 0 0"
+					<m_joint name="leg3_femur__leg3_tibia" type="revolute" axis_xyz="0 0 1"
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-					 origin_xyz="0 0.077 0" origin_rpy="0 0 0"
+					 origin_xyz="0.077 0 0" origin_rpy="0 0 0"
 					 parent="leg3_femur" child="leg3_tibia" />
 
 					<m_tibia_link name="leg3_tibia"
-							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
-							inertia_origin_xyz="0 0.077796 -0.036156"/>
+							origin_xyz="0 0 0" origin_rpy="1.5708 0 0" 
+							inertia_origin_xyz="0.077796 -0.036156 0"/>
 
 						<m_joint_fixed name="leg3_tibia__leg3_rubber_tip" type="fixed"
 						 parent="leg3_tibia" child="leg3_rubber_tip" />
 
 						<m_rubber_tip_link name="leg3_rubber_tip"
-								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
-								inertia_origin_xyz="0 0.136283 -0.133814"/>
+								origin_xyz="0.136283 -0.133814 0" origin_rpy="1.5708 0 0.3769938" 
+								inertia_origin_xyz="0.136283 -0.133814 0"/>
 
 
 		<!-- LEG 4 (West) -->
 			<m_joint name="base_link__leg4_coxa" type="revolute" axis_xyz="0 0 1" 
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-			 		 origin_xyz="-0.09850 0 0" origin_rpy="0 0 1.5708"
+			 		 origin_xyz="-0.09850 0 0.021" origin_rpy="0 3.14159 1.5708"
 					 parent="base_link" child="leg4_coxa" />
 
 			<m_coxa_link name="leg4_coxa"
-					origin_xyz="0 0 0.021" origin_rpy="0 0 0" inertia_origin_xyz="0 0.023937 0.021"/>
+					origin_xyz="0 0 0" origin_rpy="0 3.14159 0" inertia_origin_xyz="0 0.023937 0"/>
 
-				<m_joint name="leg4_coxa__leg4_femur" type="revolute" axis_xyz="1 0 0"
+				<m_joint name="leg4_coxa__leg4_femur" type="revolute" axis_xyz="0 0 1"
 				 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-				 origin_xyz="0 0.047868 0.021" origin_rpy="0 0 0"
+				 origin_xyz="0 0.047868 0" origin_rpy="-1.5708 0 1.5708"
 				 parent="leg4_coxa" child="leg4_femur" />
 
 				<m_femur_link name="leg4_femur"
-						origin_xyz="0 0.0385 0" origin_rpy="0 3.14159 0" 
-						inertia_origin_xyz="0 0.0385 0"/>
+						origin_xyz="0.0385 0 0" origin_rpy="-1.5708 0 0" 
+						inertia_origin_xyz="0.0385 0 0"/>
 
-					<m_joint name="leg4_femur__leg4_tibia" type="revolute" axis_xyz="1 0 0"
+					<m_joint name="leg4_femur__leg4_tibia" type="revolute" axis_xyz="0 0 1"
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-					 origin_xyz="0 0.077 0" origin_rpy="0 0 0"
+					 origin_xyz="0.077 0 0" origin_rpy="0 0 0"
 					 parent="leg4_femur" child="leg4_tibia" />
 
 					<m_tibia_link name="leg4_tibia"
-							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
-							inertia_origin_xyz="0 0.077796 -0.036156"/>
+							origin_xyz="0 0 0" origin_rpy="1.5708 0 0" 
+							inertia_origin_xyz="0.077796 -0.036156 0"/>
 
 						<m_joint_fixed name="leg4_tibia__leg4_rubber_tip" type="fixed"
 						 parent="leg4_tibia" child="leg4_rubber_tip" />
 
 						<m_rubber_tip_link name="leg4_rubber_tip"
-								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
-								inertia_origin_xyz="0 0.136283 -0.133814"/>
+								origin_xyz="0.136283 -0.133814 0" origin_rpy="1.5708 0 0.3769938" 
+								inertia_origin_xyz="0.136283 -0.133814 0"/>
 
 
 		<!-- LEG 5 (South East) -->
 			<m_joint name="base_link__leg5_coxa" type="revolute" axis_xyz="0 0 1" 
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-			 		 origin_xyz="0.072981 -0.109608 0" origin_rpy="0 0 -2.3562"
+			 		 origin_xyz="0.072981 -0.109608 0.021" origin_rpy="0 3.14159 -2.3562"
 					 parent="base_link" child="leg5_coxa" />
 
 			<m_coxa_link name="leg5_coxa"
-					origin_xyz="0 0 0.021" origin_rpy="0 0 0" inertia_origin_xyz="0 0.023937 0.021"/>
+					origin_xyz="0 0 0" origin_rpy="0 3.14159 0" inertia_origin_xyz="0 0.023937 0"/>
 
-				<m_joint name="leg5_coxa__leg5_femur" type="revolute" axis_xyz="1 0 0"
+				<m_joint name="leg5_coxa__leg5_femur" type="revolute" axis_xyz="0 0 1"
 						 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-						 origin_xyz="0 0.047868 0.021" origin_rpy="0 0 0"
+						 origin_xyz="0 0.047868 0" origin_rpy="-1.5708 0 1.5708"
 						 parent="leg5_coxa" child="leg5_femur" />
 
 				<m_femur_link name="leg5_femur"
-						origin_xyz="0 0.0385 0" origin_rpy="0 3.14159 0" 
-						inertia_origin_xyz="0 0.0385 0"/>
+						origin_xyz="0.0385 0 0" origin_rpy="-1.5708 0 0" 
+						inertia_origin_xyz="0.0385 0 0"/>
 
-					<m_joint name="leg5_femur__leg5_tibia" type="revolute" axis_xyz="1 0 0"
+					<m_joint name="leg5_femur__leg5_tibia" type="revolute" axis_xyz="0 0 1"
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-					 origin_xyz="0 0.077 0" origin_rpy="0 0 0"
+					 origin_xyz="0.077 0 0" origin_rpy="0 0 0"
 					 parent="leg5_femur" child="leg5_tibia" />
 
 					<m_tibia_link name="leg5_tibia"
-							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
-							inertia_origin_xyz="0 0.077796 -0.036156"/>
+							origin_xyz="0 0 0" origin_rpy="1.5708 0 0" 
+							inertia_origin_xyz="0.077796 -0.036156 0"/>
 
 						<m_joint_fixed name="leg5_tibia__leg5_rubber_tip" type="fixed"
 						 parent="leg5_tibia" child="leg5_rubber_tip" />
 
 						<m_rubber_tip_link name="leg5_rubber_tip"
-								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
-								inertia_origin_xyz="0 0.136283 -0.133814"/>
+								origin_xyz="0.136283 -0.133814 0" origin_rpy="1.5708 0 0.3769938" 
+								inertia_origin_xyz="0.136283 -0.133814 0"/>
 
 
 		<!-- LEG 6 (South West) -->
 			<m_joint name="base_link__leg6_coxa" type="revolute" axis_xyz="0 0 1" 
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-			 		 origin_xyz="-0.072981 -0.109608 0" origin_rpy="0 0 2.3562"
+			 		 origin_xyz="-0.072981 -0.109608 0.021" origin_rpy="0 3.14159 2.35622"
 					 parent="base_link" child="leg6_coxa" />
 
 			<m_coxa_link name="leg6_coxa"
-					origin_xyz="0 0 0.021" origin_rpy="0 0 0" inertia_origin_xyz="0 0.023937 0.021"/>
+					origin_xyz="0 0 0" origin_rpy="0 3.14159 0" inertia_origin_xyz="0 0.023937 0"/>
 
-				<m_joint name="leg6_coxa__leg6_femur" type="revolute" axis_xyz="1 0 0"
+				<m_joint name="leg6_coxa__leg6_femur" type="revolute" axis_xyz="0 0 1"
 						 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-						 origin_xyz="0 0.047868 0.021" origin_rpy="0 0 0"
+						 origin_xyz="0 0.047868 0" origin_rpy="-1.5708 0 1.5708"
 						 parent="leg6_coxa" child="leg6_femur" />
 
 				<m_femur_link name="leg6_femur"
-						origin_xyz="0 0.0385 0" origin_rpy="0 3.14159 0" 
-						inertia_origin_xyz="0 0.0385 0"/>
+						origin_xyz="0.0385 0 0" origin_rpy="-1.5708 0 0" 
+						inertia_origin_xyz="0.0385 0 0"/>
 
-					<m_joint name="leg6_femur__leg6_tibia" type="revolute" axis_xyz="1 0 0"
+					<m_joint name="leg6_femur__leg6_tibia" type="revolute" axis_xyz="0 0 1"
 					 effort="2.8" lower="-1.5708" upper="1.5708" velocity="5.6548668"
-					 origin_xyz="0 0.077 0" origin_rpy="0 0 0"
+					 origin_xyz="0.077 0 0" origin_rpy="0 0 0"
 					 parent="leg6_femur" child="leg6_tibia" />
 
 					<m_tibia_link name="leg6_tibia"
-							origin_xyz="0 0 0" origin_rpy="3.14159 0 1.5708" 
-							inertia_origin_xyz="0 0.077796 -0.036156"/>
+							origin_xyz="0 0 0" origin_rpy="1.5708 0 0" 
+							inertia_origin_xyz="0.077796 -0.036156 0"/>
 
 						<m_joint_fixed name="leg6_tibia__leg6_rubber_tip" type="fixed"
 						 parent="leg6_tibia" child="leg6_rubber_tip" />
 
 						<m_rubber_tip_link name="leg6_rubber_tip"
-								origin_xyz="0 0.136283 -0.133814" origin_rpy="3.5185838 0 0" 
-								inertia_origin_xyz="0 0.136283 -0.133814"/>
+								origin_xyz="0.136283 -0.133814 0" origin_rpy="1.5708 0 0.3769938" 
+								inertia_origin_xyz="0.136283 -0.133814 0"/>
 
 	<transmission name ="trans_base_link__leg1_coxa">
 		<type>transmission_interface/SimpleTransmission</type>

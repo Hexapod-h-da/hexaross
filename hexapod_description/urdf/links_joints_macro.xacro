@@ -79,11 +79,11 @@
 			</visual>
 			
 			<inertial>
-      			<origin xyz="${inertia_origin_xyz}" rpy="0 0 0"/>
+      			<origin xyz="${inertia_origin_xyz}" rpy="0 0 1.5708"/>
       			<mass value="0.12"/>
-      			<inertia ixx="1.005e-3"			ixy="0"				ixz="0" 
-      					 iyx="0"  				iyy="2.532e-4"		iyz="0" 
-      					 izx="0"				izy="0"				izz="1.071e-3"/>
+      			<inertia ixx="1.005e-4"			ixy="0"				ixz="0" 
+      					 iyx="0"  				iyy="2.532e-5"		iyz="0" 
+      					 izx="0"				izy="0"				izz="1.071e-4"/>
     		</inertial>
 		</link>
 	</xacro:macro>
@@ -149,7 +149,7 @@
 			<origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
 			<parent link="${parent}" />
 			<child link="${child}" />
-			
+
 		</joint>
 	</xacro:macro>
 
