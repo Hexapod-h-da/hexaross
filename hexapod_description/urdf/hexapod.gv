@@ -1,0 +1,80 @@
+digraph G {
+node [shape=box];
+"base_dummy" [label="base_dummy"];
+"base_link" [label="base_link"];
+"leg1_coxa" [label="leg1_coxa"];
+"leg1_femur" [label="leg1_femur"];
+"leg1_tibia" [label="leg1_tibia"];
+"leg1_rubber_tip" [label="leg1_rubber_tip"];
+"leg2_coxa" [label="leg2_coxa"];
+"leg2_femur" [label="leg2_femur"];
+"leg2_tibia" [label="leg2_tibia"];
+"leg2_rubber_tip" [label="leg2_rubber_tip"];
+"leg3_coxa" [label="leg3_coxa"];
+"leg3_femur" [label="leg3_femur"];
+"leg3_tibia" [label="leg3_tibia"];
+"leg3_rubber_tip" [label="leg3_rubber_tip"];
+"leg4_coxa" [label="leg4_coxa"];
+"leg4_femur" [label="leg4_femur"];
+"leg4_tibia" [label="leg4_tibia"];
+"leg4_rubber_tip" [label="leg4_rubber_tip"];
+"leg5_coxa" [label="leg5_coxa"];
+"leg5_femur" [label="leg5_femur"];
+"leg5_tibia" [label="leg5_tibia"];
+"leg5_rubber_tip" [label="leg5_rubber_tip"];
+"leg6_coxa" [label="leg6_coxa"];
+"leg6_femur" [label="leg6_femur"];
+"leg6_tibia" [label="leg6_tibia"];
+"leg6_rubber_tip" [label="leg6_rubber_tip"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_dummy" -> "fixed_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"fixed_joint" -> "base_link"
+"base_link" -> "base_link__leg1_coxa" [label="xyz: 0.072981 0.109608 0.021 \nrpy: 3.14159 2.65359e-06 2.35619"]
+"base_link__leg1_coxa" -> "leg1_coxa"
+"leg1_coxa" -> "leg1_coxa__leg1_femur" [label="xyz: 0 0.047868 0 \nrpy: -1.5708 -0 1.5708"]
+"leg1_coxa__leg1_femur" -> "leg1_femur"
+"leg1_femur" -> "leg1_femur__leg1_tibia" [label="xyz: 0.077 0 0 \nrpy: 0 -0 0"]
+"leg1_femur__leg1_tibia" -> "leg1_tibia"
+"leg1_tibia" -> "leg1_tibia__leg1_rubber_tip" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg1_tibia__leg1_rubber_tip" -> "leg1_rubber_tip"
+"base_link" -> "base_link__leg2_coxa" [label="xyz: -0.072981 0.109608 0.021 \nrpy: 3.14159 2.65359e-06 -2.35619"]
+"base_link__leg2_coxa" -> "leg2_coxa"
+"leg2_coxa" -> "leg2_coxa__leg2_femur" [label="xyz: 0 0.047868 0 \nrpy: -1.5708 -0 1.5708"]
+"leg2_coxa__leg2_femur" -> "leg2_femur"
+"leg2_femur" -> "leg2_femur__leg2_tibia" [label="xyz: 0.077 0 0 \nrpy: 0 -0 0"]
+"leg2_femur__leg2_tibia" -> "leg2_tibia"
+"leg2_tibia" -> "leg2_tibia__leg2_rubber_tip" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg2_tibia__leg2_rubber_tip" -> "leg2_rubber_tip"
+"base_link" -> "base_link__leg3_coxa" [label="xyz: 0.0985 0 0.021 \nrpy: 3.14159 2.65359e-06 1.57079"]
+"base_link__leg3_coxa" -> "leg3_coxa"
+"leg3_coxa" -> "leg3_coxa__leg3_femur" [label="xyz: 0 0.047868 0 \nrpy: -1.5708 -0 1.5708"]
+"leg3_coxa__leg3_femur" -> "leg3_femur"
+"leg3_femur" -> "leg3_femur__leg3_tibia" [label="xyz: 0.077 0 0 \nrpy: 0 -0 0"]
+"leg3_femur__leg3_tibia" -> "leg3_tibia"
+"leg3_tibia" -> "leg3_tibia__leg3_rubber_tip" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg3_tibia__leg3_rubber_tip" -> "leg3_rubber_tip"
+"base_link" -> "base_link__leg4_coxa" [label="xyz: -0.0985 0 0.021 \nrpy: 3.14159 2.65359e-06 -1.57079"]
+"base_link__leg4_coxa" -> "leg4_coxa"
+"leg4_coxa" -> "leg4_coxa__leg4_femur" [label="xyz: 0 0.047868 0 \nrpy: -1.5708 -0 1.5708"]
+"leg4_coxa__leg4_femur" -> "leg4_femur"
+"leg4_femur" -> "leg4_femur__leg4_tibia" [label="xyz: 0.077 0 0 \nrpy: 0 -0 0"]
+"leg4_femur__leg4_tibia" -> "leg4_tibia"
+"leg4_tibia" -> "leg4_tibia__leg4_rubber_tip" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg4_tibia__leg4_rubber_tip" -> "leg4_rubber_tip"
+"base_link" -> "base_link__leg5_coxa" [label="xyz: 0.072981 -0.109608 0.021 \nrpy: -3.14159 2.65359e-06 0.785393"]
+"base_link__leg5_coxa" -> "leg5_coxa"
+"leg5_coxa" -> "leg5_coxa__leg5_femur" [label="xyz: 0 0.047868 0 \nrpy: -1.5708 -0 1.5708"]
+"leg5_coxa__leg5_femur" -> "leg5_femur"
+"leg5_femur" -> "leg5_femur__leg5_tibia" [label="xyz: 0.077 0 0 \nrpy: 0 -0 0"]
+"leg5_femur__leg5_tibia" -> "leg5_tibia"
+"leg5_tibia" -> "leg5_tibia__leg5_rubber_tip" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg5_tibia__leg5_rubber_tip" -> "leg5_rubber_tip"
+"base_link" -> "base_link__leg6_coxa" [label="xyz: -0.072981 -0.109608 0.021 \nrpy: 3.14159 2.65359e-06 -0.785373"]
+"base_link__leg6_coxa" -> "leg6_coxa"
+"leg6_coxa" -> "leg6_coxa__leg6_femur" [label="xyz: 0 0.047868 0 \nrpy: -1.5708 -0 1.5708"]
+"leg6_coxa__leg6_femur" -> "leg6_femur"
+"leg6_femur" -> "leg6_femur__leg6_tibia" [label="xyz: 0.077 0 0 \nrpy: 0 -0 0"]
+"leg6_femur__leg6_tibia" -> "leg6_tibia"
+"leg6_tibia" -> "leg6_tibia__leg6_rubber_tip" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg6_tibia__leg6_rubber_tip" -> "leg6_rubber_tip"
+}

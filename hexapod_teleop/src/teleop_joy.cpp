@@ -53,8 +53,7 @@ void TeleopJoy::joyCallback(const sensor_msgs::Joy::ConstPtr& joy) {
 		ROS_INFO("linDis =  %f", linDis);
 
 
-		//FIRST HALF
-		for (float i=0; i<=linDis; ) {
+		for (float i=0; i<=linDis && linDis != 0; ) {
 
 			//swing
 			z = -1*(h/pow((p/2),2))*(pow((i - (p/2)),2)) + h;

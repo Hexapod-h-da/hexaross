@@ -7,6 +7,7 @@
 #include "std_msgs/Float64.h"
 #include "std_msgs/Float64.h"
 #include <string>
+#include <termios.h>
 
 // note on plain values:
 // buttons are either 0 or 1
@@ -102,6 +103,7 @@ class TeleopJoy {
 		unsigned char getAngleWithIK(float px, float py, float pz, float& q1, float& q2, float& q3);
 		unsigned char getLegCoordinatesFromWorldCoordinates(int legNumber, float pwX, float pwY, float pwZ, float& pkX, float& pkY, float& pkZ);
 		void trajectory();
+		char getch();
 
 		const static int axis_body_roll = PS3_AXIS_STICK_LEFT_LEFTWARDS;
 		const static int axis_body_pitch = PS3_AXIS_STICK_LEFT_UPWARDS;

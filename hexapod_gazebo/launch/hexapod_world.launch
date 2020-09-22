@@ -17,8 +17,7 @@
     <arg name="headless" value="$(arg headless)"/>
   </include>-->
 
-  <include file="$(find chris_world_models)/launch/gazebo_simple_creech_world.launch">
-  </include>
+  <include file="$(find chris_world_models)/launch/gazebo_simple_creech_world.launch" />
   
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(hexapod_teleop_joy)
+project(hexapod_teleop)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -43,6 +43,9 @@ include_directories( include ${catkin_INCLUDE_DIRS})
 ## Declare a cpp executable
 add_executable(teleop_joy src/teleop_joy.cpp)
 target_link_libraries(teleop_joy ${catkin_LIBRARIES})
+
+add_executable(teleop_key src/teleop_key.cpp)
+target_link_libraries(teleop_key ${catkin_LIBRARIES})
 
 add_executable(teleop_joy_troubleshoot src/teleop_joy_troubleshoot.cpp)
 target_link_libraries(teleop_joy_troubleshoot ${catkin_LIBRARIES})

@@ -1,0 +1,7 @@
+<launch>
+
+ <!-- Keyboard node -->
+
+ <node name="hexapod_teleop_key" pkg="hexapod_teleop" type="teleop_key" output="screen"/>
+
+</launch>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>hexapod_teleop_joy</name>
+  <name>hexapod_teleop</name>
   <version>0.0.0</version>
-  <description>The hexapod_teleop_joy package</description>
+  <description>The hexapod_teleop package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
