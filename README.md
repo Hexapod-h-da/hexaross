@@ -1,1 +1,1 @@
-![What](Hexaross Logo.jpg)
+![](Hexaross.jpg)
