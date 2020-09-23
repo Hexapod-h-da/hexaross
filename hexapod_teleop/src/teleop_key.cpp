@@ -19,13 +19,11 @@ void TeleopKey::keyCallback() {
 		int c = getch();   // call your non-blocking input function
 		
 		if (c == 'x') {
-		    ROS_INFO("Woohoo S printed");
 			addZOffset = 0;
 			goToHome();
 		}
 
 		 if (c == 'w' || c == 'a' || c == 's' || c == 'd') {
-		    ROS_INFO("Woohoo  printed");
 
 			switch (c) {
 				case 'w': 
@@ -69,14 +67,6 @@ void TeleopKey::keyCallback() {
 			int h=40; //height
 			int p = linDis; //distance
 			float steps = 10;
-
-
-			ROS_INFO("newX =  %f", newX);
-			ROS_INFO("newY =  %f", newY);
-			ROS_INFO("X =  %f", wX);
-			ROS_INFO("Y =  %f", wY);
-			ROS_INFO("linDis =  %f", linDis);
-
 
 			//FIRST HALF
 			for (float i=0; i<=linDis; ) {
@@ -123,9 +113,6 @@ void TeleopKey::keyCallback() {
 
 				ros::Duration(0.01).sleep();
 			}
-
-			ROS_INFO("oldX =  %f", oldX);
-			ROS_INFO("oldY =  %f", oldY);
 
 			// changing sequence
 			int temp;

@@ -102,7 +102,7 @@
 				<geometry>
 					<mesh filename="package://hexapod_description/meshes/leg_tibia.stl" scale="0.001 0.001 0.001" />
 				</geometry>
-				<material name="blue" />
+				<material name="red" />
 			</visual>
 			
 			<inertial>

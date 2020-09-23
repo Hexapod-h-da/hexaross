@@ -83,7 +83,7 @@ Visualization Manager:
       Radius: 0.10000000149011612
       Reference Frame: <Fixed Frame>
       Value: false
-    - Alpha: 0.75
+    - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
@@ -99,17 +99,17 @@ Visualization Manager:
           Show Trail: false
         base_link:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg1_coxa:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg1_femur:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg1_rubber_tip:
@@ -119,17 +119,17 @@ Visualization Manager:
           Value: true
         leg1_tibia:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg2_coxa:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg2_femur:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg2_rubber_tip:
@@ -139,22 +139,22 @@ Visualization Manager:
           Value: true
         leg2_tibia:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg3_coxa:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg3_femur:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg3_rubber_tip:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg3_tibia:
@@ -164,12 +164,12 @@ Visualization Manager:
           Value: true
         leg4_coxa:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg4_femur:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg4_rubber_tip:
@@ -179,17 +179,17 @@ Visualization Manager:
           Value: true
         leg4_tibia:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg5_coxa:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg5_femur:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg5_rubber_tip:
@@ -199,7 +199,7 @@ Visualization Manager:
           Value: true
         leg5_tibia:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         leg6_coxa:
@@ -256,25 +256,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.7197209596633911
+      Distance: 1.3799827098846436
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.1190430298447609
-        Y: 0.1984442174434662
-        Z: -0.1786574423313141
+        X: -0.0020022005774080753
+        Y: 0.17741277813911438
+        Z: -0.2063531130552292
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5453980565071106
+      Pitch: 0.6253979802131653
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.418589115142822
+      Yaw: 4.813589096069336
     Saved: ~
 Window Geometry:
   Displays:
@@ -292,5 +292,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1299
-  X: 222
-  Y: 1077
+  X: 67
+  Y: 27
